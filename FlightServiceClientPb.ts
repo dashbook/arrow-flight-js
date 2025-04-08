@@ -17,7 +17,7 @@
 
 import * as grpcWeb from 'grpc-web';
 
-import * as arrow$flight_Flight_pb from '../arrow-flight/Flight_pb'; // proto import: "arrow-flight/Flight.proto"
+import * as arrow$flight_Flight_pb from './Flight_pb'; // proto import: "arrow-flight/Flight.proto"
 
 
 export class FlightServiceClient {

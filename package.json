@@ -1,5 +1,5 @@
 {
-  "name": "arrow-flight",
+  "name": "arrow-flight-js",
   "version": "0.1.0",
   "description": "Arrow Flight protocol implementation",
   "main": "index.js",

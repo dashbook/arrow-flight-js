@@ -804,10 +804,10 @@ proto.arrow.flight.protocol.HandshakeRequest.prototype.setProtocolVersion = func
 
 /**
  * optional bytes payload = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.HandshakeRequest.prototype.getPayload = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -988,10 +988,10 @@ proto.arrow.flight.protocol.HandshakeResponse.prototype.setProtocolVersion = fun
 
 /**
  * optional bytes payload = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.HandshakeResponse.prototype.getPayload = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -1563,10 +1563,10 @@ proto.arrow.flight.protocol.Criteria.serializeBinaryToWriter = function(message,
 
 /**
  * optional bytes expression = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.Criteria.prototype.getExpression = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -1747,10 +1747,10 @@ proto.arrow.flight.protocol.Action.prototype.setType = function(value) {
 
 /**
  * optional bytes body = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.Action.prototype.getBody = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -1901,10 +1901,10 @@ proto.arrow.flight.protocol.Result.serializeBinaryToWriter = function(message, w
 
 /**
  * optional bytes body = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.Result.prototype.getBody = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -2055,10 +2055,10 @@ proto.arrow.flight.protocol.SchemaResult.serializeBinaryToWriter = function(mess
 
 /**
  * optional bytes schema = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.SchemaResult.prototype.getSchema = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -2267,10 +2267,10 @@ proto.arrow.flight.protocol.FlightDescriptor.prototype.setType = function(value)
 
 /**
  * optional bytes cmd = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.FlightDescriptor.prototype.getCmd = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -2542,10 +2542,10 @@ proto.arrow.flight.protocol.FlightInfo.serializeBinaryToWriter = function(messag
 
 /**
  * optional bytes schema = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.FlightInfo.prototype.getSchema = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -2713,10 +2713,10 @@ proto.arrow.flight.protocol.FlightInfo.prototype.setOrdered = function(value) {
 
 /**
  * optional bytes app_metadata = 7;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.FlightInfo.prototype.getAppMetadata = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
@@ -3449,10 +3449,10 @@ proto.arrow.flight.protocol.Ticket.serializeBinaryToWriter = function(message, w
 
 /**
  * optional bytes ticket = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.Ticket.prototype.getTicket = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -3895,10 +3895,10 @@ proto.arrow.flight.protocol.FlightEndpoint.prototype.hasExpirationTime = functio
 
 /**
  * optional bytes app_metadata = 4;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.FlightEndpoint.prototype.getAppMetadata = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
@@ -4275,10 +4275,10 @@ proto.arrow.flight.protocol.FlightData.prototype.hasFlightDescriptor = function(
 
 /**
  * optional bytes data_header = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.FlightData.prototype.getDataHeader = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -4317,10 +4317,10 @@ proto.arrow.flight.protocol.FlightData.prototype.setDataHeader = function(value)
 
 /**
  * optional bytes app_metadata = 3;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.FlightData.prototype.getAppMetadata = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -4359,10 +4359,10 @@ proto.arrow.flight.protocol.FlightData.prototype.setAppMetadata = function(value
 
 /**
  * optional bytes data_body = 1000;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.FlightData.prototype.getDataBody = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1000, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1000, ""));
 };
 
 
@@ -4513,10 +4513,10 @@ proto.arrow.flight.protocol.PutResult.serializeBinaryToWriter = function(message
 
 /**
  * optional bytes app_metadata = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.PutResult.prototype.getAppMetadata = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 

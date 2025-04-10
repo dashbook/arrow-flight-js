@@ -2979,10 +2979,10 @@ proto.arrow.flight.protocol.sql.ActionCreatePreparedStatementRequest.prototype.s
 
 /**
  * optional bytes transaction_id = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.ActionCreatePreparedStatementRequest.prototype.getTransactionId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -3163,10 +3163,10 @@ proto.arrow.flight.protocol.sql.SubstraitPlan.serializeBinaryToWriter = function
 
 /**
  * optional bytes plan = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.SubstraitPlan.prototype.getPlan = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -3386,10 +3386,10 @@ proto.arrow.flight.protocol.sql.ActionCreatePreparedSubstraitPlanRequest.prototy
 
 /**
  * optional bytes transaction_id = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.ActionCreatePreparedSubstraitPlanRequest.prototype.getTransactionId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -3582,10 +3582,10 @@ proto.arrow.flight.protocol.sql.ActionCreatePreparedStatementResult.serializeBin
 
 /**
  * optional bytes prepared_statement_handle = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.ActionCreatePreparedStatementResult.prototype.getPreparedStatementHandle = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -3624,10 +3624,10 @@ proto.arrow.flight.protocol.sql.ActionCreatePreparedStatementResult.prototype.se
 
 /**
  * optional bytes dataset_schema = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.ActionCreatePreparedStatementResult.prototype.getDatasetSchema = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -3666,10 +3666,10 @@ proto.arrow.flight.protocol.sql.ActionCreatePreparedStatementResult.prototype.se
 
 /**
  * optional bytes parameter_schema = 3;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.ActionCreatePreparedStatementResult.prototype.getParameterSchema = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -3820,10 +3820,10 @@ proto.arrow.flight.protocol.sql.ActionClosePreparedStatementRequest.serializeBin
 
 /**
  * optional bytes prepared_statement_handle = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.ActionClosePreparedStatementRequest.prototype.getPreparedStatementHandle = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -4087,10 +4087,10 @@ proto.arrow.flight.protocol.sql.ActionBeginSavepointRequest.serializeBinaryToWri
 
 /**
  * optional bytes transaction_id = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.ActionBeginSavepointRequest.prototype.getTransactionId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -4259,10 +4259,10 @@ proto.arrow.flight.protocol.sql.ActionBeginTransactionResult.serializeBinaryToWr
 
 /**
  * optional bytes transaction_id = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.ActionBeginTransactionResult.prototype.getTransactionId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -4413,10 +4413,10 @@ proto.arrow.flight.protocol.sql.ActionBeginSavepointResult.serializeBinaryToWrit
 
 /**
  * optional bytes savepoint_id = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.ActionBeginSavepointResult.prototype.getSavepointId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -4588,10 +4588,10 @@ proto.arrow.flight.protocol.sql.ActionEndTransactionRequest.EndTransaction = {
 
 /**
  * optional bytes transaction_id = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.ActionEndTransactionRequest.prototype.getTransactionId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -4781,10 +4781,10 @@ proto.arrow.flight.protocol.sql.ActionEndSavepointRequest.EndSavepoint = {
 
 /**
  * optional bytes savepoint_id = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.ActionEndSavepointRequest.prototype.getSavepointId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -4983,10 +4983,10 @@ proto.arrow.flight.protocol.sql.CommandStatementQuery.prototype.setQuery = funct
 
 /**
  * optional bytes transaction_id = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.CommandStatementQuery.prototype.getTransactionId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -5206,10 +5206,10 @@ proto.arrow.flight.protocol.sql.CommandStatementSubstraitPlan.prototype.hasPlan 
 
 /**
  * optional bytes transaction_id = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.CommandStatementSubstraitPlan.prototype.getTransactionId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -5378,10 +5378,10 @@ proto.arrow.flight.protocol.sql.TicketStatementQuery.serializeBinaryToWriter = f
 
 /**
  * optional bytes statement_handle = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.TicketStatementQuery.prototype.getStatementHandle = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -5532,10 +5532,10 @@ proto.arrow.flight.protocol.sql.CommandPreparedStatementQuery.serializeBinaryToW
 
 /**
  * optional bytes prepared_statement_handle = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.CommandPreparedStatementQuery.prototype.getPreparedStatementHandle = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -5716,10 +5716,10 @@ proto.arrow.flight.protocol.sql.CommandStatementUpdate.prototype.setQuery = func
 
 /**
  * optional bytes transaction_id = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.CommandStatementUpdate.prototype.getTransactionId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -5888,10 +5888,10 @@ proto.arrow.flight.protocol.sql.CommandPreparedStatementUpdate.serializeBinaryTo
 
 /**
  * optional bytes prepared_statement_handle = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.CommandPreparedStatementUpdate.prototype.getPreparedStatementHandle = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -6439,10 +6439,10 @@ proto.arrow.flight.protocol.sql.CommandStatementIngest.prototype.setTemporary = 
 
 /**
  * optional bytes transaction_id = 6;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.CommandStatementIngest.prototype.getTransactionId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
@@ -6763,10 +6763,10 @@ proto.arrow.flight.protocol.sql.DoPutPreparedStatementResult.serializeBinaryToWr
 
 /**
  * optional bytes prepared_statement_handle = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.DoPutPreparedStatementResult.prototype.getPreparedStatementHandle = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -6935,10 +6935,10 @@ proto.arrow.flight.protocol.sql.ActionCancelQueryRequest.serializeBinaryToWriter
 
 /**
  * optional bytes info = 1;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.arrow.flight.protocol.sql.ActionCancelQueryRequest.prototype.getInfo = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 

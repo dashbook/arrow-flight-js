@@ -1,3 +1,3 @@
-export * as default from "./Flight"
-export * as sql from "./FlightSql"
-export { Any } from "./google/protobuf/any";
+export * as default from "./Flight.js"
+export * as sql from "./FlightSql.js"
+export { Any } from "./google/protobuf/any.js";

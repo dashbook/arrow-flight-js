@@ -7,7 +7,7 @@
 /* eslint-disable */
 import { BinaryReader, BinaryWriter } from "@bufbuild/protobuf/wire";
 import { type CallContext, type CallOptions } from "nice-grpc-common";
-import { Timestamp } from "./google/protobuf/timestamp.js";
+import { Timestamp } from "./google/protobuf/timestamp";
 
 export const protobufPackage = "arrow.flight.protocol";
 

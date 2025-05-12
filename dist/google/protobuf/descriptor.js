@@ -134,12 +134,11 @@ export const FileDescriptorSet = {
         return message;
     },
     create(base) {
-        return FileDescriptorSet.fromPartial(base !== null && base !== void 0 ? base : {});
+        return FileDescriptorSet.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseFileDescriptorSet();
-        message.file = ((_a = object.file) === null || _a === void 0 ? void 0 : _a.map((e) => FileDescriptorProto.fromPartial(e))) || [];
+        message.file = object.file?.map((e) => FileDescriptorProto.fromPartial(e)) || [];
         return message;
     },
 };
@@ -317,27 +316,26 @@ export const FileDescriptorProto = {
         return message;
     },
     create(base) {
-        return FileDescriptorProto.fromPartial(base !== null && base !== void 0 ? base : {});
+        return FileDescriptorProto.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
         const message = createBaseFileDescriptorProto();
-        message.name = (_a = object.name) !== null && _a !== void 0 ? _a : "";
-        message.package = (_b = object.package) !== null && _b !== void 0 ? _b : "";
-        message.dependency = ((_c = object.dependency) === null || _c === void 0 ? void 0 : _c.map((e) => e)) || [];
-        message.publicDependency = ((_d = object.publicDependency) === null || _d === void 0 ? void 0 : _d.map((e) => e)) || [];
-        message.weakDependency = ((_e = object.weakDependency) === null || _e === void 0 ? void 0 : _e.map((e) => e)) || [];
-        message.messageType = ((_f = object.messageType) === null || _f === void 0 ? void 0 : _f.map((e) => DescriptorProto.fromPartial(e))) || [];
-        message.enumType = ((_g = object.enumType) === null || _g === void 0 ? void 0 : _g.map((e) => EnumDescriptorProto.fromPartial(e))) || [];
-        message.service = ((_h = object.service) === null || _h === void 0 ? void 0 : _h.map((e) => ServiceDescriptorProto.fromPartial(e))) || [];
-        message.extension = ((_j = object.extension) === null || _j === void 0 ? void 0 : _j.map((e) => FieldDescriptorProto.fromPartial(e))) || [];
+        message.name = object.name ?? "";
+        message.package = object.package ?? "";
+        message.dependency = object.dependency?.map((e) => e) || [];
+        message.publicDependency = object.publicDependency?.map((e) => e) || [];
+        message.weakDependency = object.weakDependency?.map((e) => e) || [];
+        message.messageType = object.messageType?.map((e) => DescriptorProto.fromPartial(e)) || [];
+        message.enumType = object.enumType?.map((e) => EnumDescriptorProto.fromPartial(e)) || [];
+        message.service = object.service?.map((e) => ServiceDescriptorProto.fromPartial(e)) || [];
+        message.extension = object.extension?.map((e) => FieldDescriptorProto.fromPartial(e)) || [];
         message.options = (object.options !== undefined && object.options !== null)
             ? FileOptions.fromPartial(object.options)
             : undefined;
         message.sourceCodeInfo = (object.sourceCodeInfo !== undefined && object.sourceCodeInfo !== null)
             ? SourceCodeInfo.fromPartial(object.sourceCodeInfo)
             : undefined;
-        message.syntax = (_k = object.syntax) !== null && _k !== void 0 ? _k : "";
+        message.syntax = object.syntax ?? "";
         return message;
     },
 };
@@ -475,23 +473,22 @@ export const DescriptorProto = {
         return message;
     },
     create(base) {
-        return DescriptorProto.fromPartial(base !== null && base !== void 0 ? base : {});
+        return DescriptorProto.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j;
         const message = createBaseDescriptorProto();
-        message.name = (_a = object.name) !== null && _a !== void 0 ? _a : "";
-        message.field = ((_b = object.field) === null || _b === void 0 ? void 0 : _b.map((e) => FieldDescriptorProto.fromPartial(e))) || [];
-        message.extension = ((_c = object.extension) === null || _c === void 0 ? void 0 : _c.map((e) => FieldDescriptorProto.fromPartial(e))) || [];
-        message.nestedType = ((_d = object.nestedType) === null || _d === void 0 ? void 0 : _d.map((e) => DescriptorProto.fromPartial(e))) || [];
-        message.enumType = ((_e = object.enumType) === null || _e === void 0 ? void 0 : _e.map((e) => EnumDescriptorProto.fromPartial(e))) || [];
-        message.extensionRange = ((_f = object.extensionRange) === null || _f === void 0 ? void 0 : _f.map((e) => DescriptorProto_ExtensionRange.fromPartial(e))) || [];
-        message.oneofDecl = ((_g = object.oneofDecl) === null || _g === void 0 ? void 0 : _g.map((e) => OneofDescriptorProto.fromPartial(e))) || [];
+        message.name = object.name ?? "";
+        message.field = object.field?.map((e) => FieldDescriptorProto.fromPartial(e)) || [];
+        message.extension = object.extension?.map((e) => FieldDescriptorProto.fromPartial(e)) || [];
+        message.nestedType = object.nestedType?.map((e) => DescriptorProto.fromPartial(e)) || [];
+        message.enumType = object.enumType?.map((e) => EnumDescriptorProto.fromPartial(e)) || [];
+        message.extensionRange = object.extensionRange?.map((e) => DescriptorProto_ExtensionRange.fromPartial(e)) || [];
+        message.oneofDecl = object.oneofDecl?.map((e) => OneofDescriptorProto.fromPartial(e)) || [];
         message.options = (object.options !== undefined && object.options !== null)
             ? MessageOptions.fromPartial(object.options)
             : undefined;
-        message.reservedRange = ((_h = object.reservedRange) === null || _h === void 0 ? void 0 : _h.map((e) => DescriptorProto_ReservedRange.fromPartial(e))) || [];
-        message.reservedName = ((_j = object.reservedName) === null || _j === void 0 ? void 0 : _j.map((e) => e)) || [];
+        message.reservedRange = object.reservedRange?.map((e) => DescriptorProto_ReservedRange.fromPartial(e)) || [];
+        message.reservedName = object.reservedName?.map((e) => e) || [];
         return message;
     },
 };
@@ -548,13 +545,12 @@ export const DescriptorProto_ExtensionRange = {
         return message;
     },
     create(base) {
-        return DescriptorProto_ExtensionRange.fromPartial(base !== null && base !== void 0 ? base : {});
+        return DescriptorProto_ExtensionRange.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseDescriptorProto_ExtensionRange();
-        message.start = (_a = object.start) !== null && _a !== void 0 ? _a : 0;
-        message.end = (_b = object.end) !== null && _b !== void 0 ? _b : 0;
+        message.start = object.start ?? 0;
+        message.end = object.end ?? 0;
         message.options = (object.options !== undefined && object.options !== null)
             ? ExtensionRangeOptions.fromPartial(object.options)
             : undefined;
@@ -604,13 +600,12 @@ export const DescriptorProto_ReservedRange = {
         return message;
     },
     create(base) {
-        return DescriptorProto_ReservedRange.fromPartial(base !== null && base !== void 0 ? base : {});
+        return DescriptorProto_ReservedRange.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseDescriptorProto_ReservedRange();
-        message.start = (_a = object.start) !== null && _a !== void 0 ? _a : 0;
-        message.end = (_b = object.end) !== null && _b !== void 0 ? _b : 0;
+        message.start = object.start ?? 0;
+        message.end = object.end ?? 0;
         return message;
     },
 };
@@ -647,12 +642,11 @@ export const ExtensionRangeOptions = {
         return message;
     },
     create(base) {
-        return ExtensionRangeOptions.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ExtensionRangeOptions.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseExtensionRangeOptions();
-        message.uninterpretedOption = ((_a = object.uninterpretedOption) === null || _a === void 0 ? void 0 : _a.map((e) => UninterpretedOption.fromPartial(e))) || [];
+        message.uninterpretedOption = object.uninterpretedOption?.map((e) => UninterpretedOption.fromPartial(e)) || [];
         return message;
     },
 };
@@ -801,24 +795,23 @@ export const FieldDescriptorProto = {
         return message;
     },
     create(base) {
-        return FieldDescriptorProto.fromPartial(base !== null && base !== void 0 ? base : {});
+        return FieldDescriptorProto.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
         const message = createBaseFieldDescriptorProto();
-        message.name = (_a = object.name) !== null && _a !== void 0 ? _a : "";
-        message.number = (_b = object.number) !== null && _b !== void 0 ? _b : 0;
-        message.label = (_c = object.label) !== null && _c !== void 0 ? _c : 1;
-        message.type = (_d = object.type) !== null && _d !== void 0 ? _d : 1;
-        message.typeName = (_e = object.typeName) !== null && _e !== void 0 ? _e : "";
-        message.extendee = (_f = object.extendee) !== null && _f !== void 0 ? _f : "";
-        message.defaultValue = (_g = object.defaultValue) !== null && _g !== void 0 ? _g : "";
-        message.oneofIndex = (_h = object.oneofIndex) !== null && _h !== void 0 ? _h : 0;
-        message.jsonName = (_j = object.jsonName) !== null && _j !== void 0 ? _j : "";
+        message.name = object.name ?? "";
+        message.number = object.number ?? 0;
+        message.label = object.label ?? 1;
+        message.type = object.type ?? 1;
+        message.typeName = object.typeName ?? "";
+        message.extendee = object.extendee ?? "";
+        message.defaultValue = object.defaultValue ?? "";
+        message.oneofIndex = object.oneofIndex ?? 0;
+        message.jsonName = object.jsonName ?? "";
         message.options = (object.options !== undefined && object.options !== null)
             ? FieldOptions.fromPartial(object.options)
             : undefined;
-        message.proto3Optional = (_k = object.proto3Optional) !== null && _k !== void 0 ? _k : false;
+        message.proto3Optional = object.proto3Optional ?? false;
         return message;
     },
 };
@@ -865,12 +858,11 @@ export const OneofDescriptorProto = {
         return message;
     },
     create(base) {
-        return OneofDescriptorProto.fromPartial(base !== null && base !== void 0 ? base : {});
+        return OneofDescriptorProto.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseOneofDescriptorProto();
-        message.name = (_a = object.name) !== null && _a !== void 0 ? _a : "";
+        message.name = object.name ?? "";
         message.options = (object.options !== undefined && object.options !== null)
             ? OneofOptions.fromPartial(object.options)
             : undefined;
@@ -950,19 +942,18 @@ export const EnumDescriptorProto = {
         return message;
     },
     create(base) {
-        return EnumDescriptorProto.fromPartial(base !== null && base !== void 0 ? base : {});
+        return EnumDescriptorProto.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d;
         const message = createBaseEnumDescriptorProto();
-        message.name = (_a = object.name) !== null && _a !== void 0 ? _a : "";
-        message.value = ((_b = object.value) === null || _b === void 0 ? void 0 : _b.map((e) => EnumValueDescriptorProto.fromPartial(e))) || [];
+        message.name = object.name ?? "";
+        message.value = object.value?.map((e) => EnumValueDescriptorProto.fromPartial(e)) || [];
         message.options = (object.options !== undefined && object.options !== null)
             ? EnumOptions.fromPartial(object.options)
             : undefined;
-        message.reservedRange = ((_c = object.reservedRange) === null || _c === void 0 ? void 0 : _c.map((e) => EnumDescriptorProto_EnumReservedRange.fromPartial(e))) ||
+        message.reservedRange = object.reservedRange?.map((e) => EnumDescriptorProto_EnumReservedRange.fromPartial(e)) ||
             [];
-        message.reservedName = ((_d = object.reservedName) === null || _d === void 0 ? void 0 : _d.map((e) => e)) || [];
+        message.reservedName = object.reservedName?.map((e) => e) || [];
         return message;
     },
 };
@@ -1009,13 +1000,12 @@ export const EnumDescriptorProto_EnumReservedRange = {
         return message;
     },
     create(base) {
-        return EnumDescriptorProto_EnumReservedRange.fromPartial(base !== null && base !== void 0 ? base : {});
+        return EnumDescriptorProto_EnumReservedRange.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseEnumDescriptorProto_EnumReservedRange();
-        message.start = (_a = object.start) !== null && _a !== void 0 ? _a : 0;
-        message.end = (_b = object.end) !== null && _b !== void 0 ? _b : 0;
+        message.start = object.start ?? 0;
+        message.end = object.end ?? 0;
         return message;
     },
 };
@@ -1072,13 +1062,12 @@ export const EnumValueDescriptorProto = {
         return message;
     },
     create(base) {
-        return EnumValueDescriptorProto.fromPartial(base !== null && base !== void 0 ? base : {});
+        return EnumValueDescriptorProto.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseEnumValueDescriptorProto();
-        message.name = (_a = object.name) !== null && _a !== void 0 ? _a : "";
-        message.number = (_b = object.number) !== null && _b !== void 0 ? _b : 0;
+        message.name = object.name ?? "";
+        message.number = object.number ?? 0;
         message.options = (object.options !== undefined && object.options !== null)
             ? EnumValueOptions.fromPartial(object.options)
             : undefined;
@@ -1138,13 +1127,12 @@ export const ServiceDescriptorProto = {
         return message;
     },
     create(base) {
-        return ServiceDescriptorProto.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ServiceDescriptorProto.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseServiceDescriptorProto();
-        message.name = (_a = object.name) !== null && _a !== void 0 ? _a : "";
-        message.method = ((_b = object.method) === null || _b === void 0 ? void 0 : _b.map((e) => MethodDescriptorProto.fromPartial(e))) || [];
+        message.name = object.name ?? "";
+        message.method = object.method?.map((e) => MethodDescriptorProto.fromPartial(e)) || [];
         message.options = (object.options !== undefined && object.options !== null)
             ? ServiceOptions.fromPartial(object.options)
             : undefined;
@@ -1241,19 +1229,18 @@ export const MethodDescriptorProto = {
         return message;
     },
     create(base) {
-        return MethodDescriptorProto.fromPartial(base !== null && base !== void 0 ? base : {});
+        return MethodDescriptorProto.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e;
         const message = createBaseMethodDescriptorProto();
-        message.name = (_a = object.name) !== null && _a !== void 0 ? _a : "";
-        message.inputType = (_b = object.inputType) !== null && _b !== void 0 ? _b : "";
-        message.outputType = (_c = object.outputType) !== null && _c !== void 0 ? _c : "";
+        message.name = object.name ?? "";
+        message.inputType = object.inputType ?? "";
+        message.outputType = object.outputType ?? "";
         message.options = (object.options !== undefined && object.options !== null)
             ? MethodOptions.fromPartial(object.options)
             : undefined;
-        message.clientStreaming = (_d = object.clientStreaming) !== null && _d !== void 0 ? _d : false;
-        message.serverStreaming = (_e = object.serverStreaming) !== null && _e !== void 0 ? _e : false;
+        message.clientStreaming = object.clientStreaming ?? false;
+        message.serverStreaming = object.serverStreaming ?? false;
         return message;
     },
 };
@@ -1512,32 +1499,31 @@ export const FileOptions = {
         return message;
     },
     create(base) {
-        return FileOptions.fromPartial(base !== null && base !== void 0 ? base : {});
+        return FileOptions.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w;
         const message = createBaseFileOptions();
-        message.javaPackage = (_a = object.javaPackage) !== null && _a !== void 0 ? _a : "";
-        message.javaOuterClassname = (_b = object.javaOuterClassname) !== null && _b !== void 0 ? _b : "";
-        message.javaMultipleFiles = (_c = object.javaMultipleFiles) !== null && _c !== void 0 ? _c : false;
-        message.javaGenerateEqualsAndHash = (_d = object.javaGenerateEqualsAndHash) !== null && _d !== void 0 ? _d : false;
-        message.javaStringCheckUtf8 = (_e = object.javaStringCheckUtf8) !== null && _e !== void 0 ? _e : false;
-        message.optimizeFor = (_f = object.optimizeFor) !== null && _f !== void 0 ? _f : 1;
-        message.goPackage = (_g = object.goPackage) !== null && _g !== void 0 ? _g : "";
-        message.ccGenericServices = (_h = object.ccGenericServices) !== null && _h !== void 0 ? _h : false;
-        message.javaGenericServices = (_j = object.javaGenericServices) !== null && _j !== void 0 ? _j : false;
-        message.pyGenericServices = (_k = object.pyGenericServices) !== null && _k !== void 0 ? _k : false;
-        message.phpGenericServices = (_l = object.phpGenericServices) !== null && _l !== void 0 ? _l : false;
-        message.deprecated = (_m = object.deprecated) !== null && _m !== void 0 ? _m : false;
-        message.ccEnableArenas = (_o = object.ccEnableArenas) !== null && _o !== void 0 ? _o : true;
-        message.objcClassPrefix = (_p = object.objcClassPrefix) !== null && _p !== void 0 ? _p : "";
-        message.csharpNamespace = (_q = object.csharpNamespace) !== null && _q !== void 0 ? _q : "";
-        message.swiftPrefix = (_r = object.swiftPrefix) !== null && _r !== void 0 ? _r : "";
-        message.phpClassPrefix = (_s = object.phpClassPrefix) !== null && _s !== void 0 ? _s : "";
-        message.phpNamespace = (_t = object.phpNamespace) !== null && _t !== void 0 ? _t : "";
-        message.phpMetadataNamespace = (_u = object.phpMetadataNamespace) !== null && _u !== void 0 ? _u : "";
-        message.rubyPackage = (_v = object.rubyPackage) !== null && _v !== void 0 ? _v : "";
-        message.uninterpretedOption = ((_w = object.uninterpretedOption) === null || _w === void 0 ? void 0 : _w.map((e) => UninterpretedOption.fromPartial(e))) || [];
+        message.javaPackage = object.javaPackage ?? "";
+        message.javaOuterClassname = object.javaOuterClassname ?? "";
+        message.javaMultipleFiles = object.javaMultipleFiles ?? false;
+        message.javaGenerateEqualsAndHash = object.javaGenerateEqualsAndHash ?? false;
+        message.javaStringCheckUtf8 = object.javaStringCheckUtf8 ?? false;
+        message.optimizeFor = object.optimizeFor ?? 1;
+        message.goPackage = object.goPackage ?? "";
+        message.ccGenericServices = object.ccGenericServices ?? false;
+        message.javaGenericServices = object.javaGenericServices ?? false;
+        message.pyGenericServices = object.pyGenericServices ?? false;
+        message.phpGenericServices = object.phpGenericServices ?? false;
+        message.deprecated = object.deprecated ?? false;
+        message.ccEnableArenas = object.ccEnableArenas ?? true;
+        message.objcClassPrefix = object.objcClassPrefix ?? "";
+        message.csharpNamespace = object.csharpNamespace ?? "";
+        message.swiftPrefix = object.swiftPrefix ?? "";
+        message.phpClassPrefix = object.phpClassPrefix ?? "";
+        message.phpNamespace = object.phpNamespace ?? "";
+        message.phpMetadataNamespace = object.phpMetadataNamespace ?? "";
+        message.rubyPackage = object.rubyPackage ?? "";
+        message.uninterpretedOption = object.uninterpretedOption?.map((e) => UninterpretedOption.fromPartial(e)) || [];
         return message;
     },
 };
@@ -1620,16 +1606,15 @@ export const MessageOptions = {
         return message;
     },
     create(base) {
-        return MessageOptions.fromPartial(base !== null && base !== void 0 ? base : {});
+        return MessageOptions.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e;
         const message = createBaseMessageOptions();
-        message.messageSetWireFormat = (_a = object.messageSetWireFormat) !== null && _a !== void 0 ? _a : false;
-        message.noStandardDescriptorAccessor = (_b = object.noStandardDescriptorAccessor) !== null && _b !== void 0 ? _b : false;
-        message.deprecated = (_c = object.deprecated) !== null && _c !== void 0 ? _c : false;
-        message.mapEntry = (_d = object.mapEntry) !== null && _d !== void 0 ? _d : false;
-        message.uninterpretedOption = ((_e = object.uninterpretedOption) === null || _e === void 0 ? void 0 : _e.map((e) => UninterpretedOption.fromPartial(e))) || [];
+        message.messageSetWireFormat = object.messageSetWireFormat ?? false;
+        message.noStandardDescriptorAccessor = object.noStandardDescriptorAccessor ?? false;
+        message.deprecated = object.deprecated ?? false;
+        message.mapEntry = object.mapEntry ?? false;
+        message.uninterpretedOption = object.uninterpretedOption?.map((e) => UninterpretedOption.fromPartial(e)) || [];
         return message;
     },
 };
@@ -1726,18 +1711,17 @@ export const FieldOptions = {
         return message;
     },
     create(base) {
-        return FieldOptions.fromPartial(base !== null && base !== void 0 ? base : {});
+        return FieldOptions.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e, _f, _g;
         const message = createBaseFieldOptions();
-        message.ctype = (_a = object.ctype) !== null && _a !== void 0 ? _a : 0;
-        message.packed = (_b = object.packed) !== null && _b !== void 0 ? _b : false;
-        message.jstype = (_c = object.jstype) !== null && _c !== void 0 ? _c : 0;
-        message.lazy = (_d = object.lazy) !== null && _d !== void 0 ? _d : false;
-        message.deprecated = (_e = object.deprecated) !== null && _e !== void 0 ? _e : false;
-        message.weak = (_f = object.weak) !== null && _f !== void 0 ? _f : false;
-        message.uninterpretedOption = ((_g = object.uninterpretedOption) === null || _g === void 0 ? void 0 : _g.map((e) => UninterpretedOption.fromPartial(e))) || [];
+        message.ctype = object.ctype ?? 0;
+        message.packed = object.packed ?? false;
+        message.jstype = object.jstype ?? 0;
+        message.lazy = object.lazy ?? false;
+        message.deprecated = object.deprecated ?? false;
+        message.weak = object.weak ?? false;
+        message.uninterpretedOption = object.uninterpretedOption?.map((e) => UninterpretedOption.fromPartial(e)) || [];
         return message;
     },
 };
@@ -1774,12 +1758,11 @@ export const OneofOptions = {
         return message;
     },
     create(base) {
-        return OneofOptions.fromPartial(base !== null && base !== void 0 ? base : {});
+        return OneofOptions.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseOneofOptions();
-        message.uninterpretedOption = ((_a = object.uninterpretedOption) === null || _a === void 0 ? void 0 : _a.map((e) => UninterpretedOption.fromPartial(e))) || [];
+        message.uninterpretedOption = object.uninterpretedOption?.map((e) => UninterpretedOption.fromPartial(e)) || [];
         return message;
     },
 };
@@ -1836,14 +1819,13 @@ export const EnumOptions = {
         return message;
     },
     create(base) {
-        return EnumOptions.fromPartial(base !== null && base !== void 0 ? base : {});
+        return EnumOptions.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c;
         const message = createBaseEnumOptions();
-        message.allowAlias = (_a = object.allowAlias) !== null && _a !== void 0 ? _a : false;
-        message.deprecated = (_b = object.deprecated) !== null && _b !== void 0 ? _b : false;
-        message.uninterpretedOption = ((_c = object.uninterpretedOption) === null || _c === void 0 ? void 0 : _c.map((e) => UninterpretedOption.fromPartial(e))) || [];
+        message.allowAlias = object.allowAlias ?? false;
+        message.deprecated = object.deprecated ?? false;
+        message.uninterpretedOption = object.uninterpretedOption?.map((e) => UninterpretedOption.fromPartial(e)) || [];
         return message;
     },
 };
@@ -1890,13 +1872,12 @@ export const EnumValueOptions = {
         return message;
     },
     create(base) {
-        return EnumValueOptions.fromPartial(base !== null && base !== void 0 ? base : {});
+        return EnumValueOptions.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseEnumValueOptions();
-        message.deprecated = (_a = object.deprecated) !== null && _a !== void 0 ? _a : false;
-        message.uninterpretedOption = ((_b = object.uninterpretedOption) === null || _b === void 0 ? void 0 : _b.map((e) => UninterpretedOption.fromPartial(e))) || [];
+        message.deprecated = object.deprecated ?? false;
+        message.uninterpretedOption = object.uninterpretedOption?.map((e) => UninterpretedOption.fromPartial(e)) || [];
         return message;
     },
 };
@@ -1943,13 +1924,12 @@ export const ServiceOptions = {
         return message;
     },
     create(base) {
-        return ServiceOptions.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ServiceOptions.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseServiceOptions();
-        message.deprecated = (_a = object.deprecated) !== null && _a !== void 0 ? _a : false;
-        message.uninterpretedOption = ((_b = object.uninterpretedOption) === null || _b === void 0 ? void 0 : _b.map((e) => UninterpretedOption.fromPartial(e))) || [];
+        message.deprecated = object.deprecated ?? false;
+        message.uninterpretedOption = object.uninterpretedOption?.map((e) => UninterpretedOption.fromPartial(e)) || [];
         return message;
     },
 };
@@ -2006,14 +1986,13 @@ export const MethodOptions = {
         return message;
     },
     create(base) {
-        return MethodOptions.fromPartial(base !== null && base !== void 0 ? base : {});
+        return MethodOptions.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c;
         const message = createBaseMethodOptions();
-        message.deprecated = (_a = object.deprecated) !== null && _a !== void 0 ? _a : false;
-        message.idempotencyLevel = (_b = object.idempotencyLevel) !== null && _b !== void 0 ? _b : 0;
-        message.uninterpretedOption = ((_c = object.uninterpretedOption) === null || _c === void 0 ? void 0 : _c.map((e) => UninterpretedOption.fromPartial(e))) || [];
+        message.deprecated = object.deprecated ?? false;
+        message.idempotencyLevel = object.idempotencyLevel ?? 0;
+        message.uninterpretedOption = object.uninterpretedOption?.map((e) => UninterpretedOption.fromPartial(e)) || [];
         return message;
     },
 };
@@ -2118,18 +2097,17 @@ export const UninterpretedOption = {
         return message;
     },
     create(base) {
-        return UninterpretedOption.fromPartial(base !== null && base !== void 0 ? base : {});
+        return UninterpretedOption.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e, _f, _g;
         const message = createBaseUninterpretedOption();
-        message.name = ((_a = object.name) === null || _a === void 0 ? void 0 : _a.map((e) => UninterpretedOption_NamePart.fromPartial(e))) || [];
-        message.identifierValue = (_b = object.identifierValue) !== null && _b !== void 0 ? _b : "";
-        message.positiveIntValue = (_c = object.positiveIntValue) !== null && _c !== void 0 ? _c : 0;
-        message.negativeIntValue = (_d = object.negativeIntValue) !== null && _d !== void 0 ? _d : 0;
-        message.doubleValue = (_e = object.doubleValue) !== null && _e !== void 0 ? _e : 0;
-        message.stringValue = (_f = object.stringValue) !== null && _f !== void 0 ? _f : new Uint8Array(0);
-        message.aggregateValue = (_g = object.aggregateValue) !== null && _g !== void 0 ? _g : "";
+        message.name = object.name?.map((e) => UninterpretedOption_NamePart.fromPartial(e)) || [];
+        message.identifierValue = object.identifierValue ?? "";
+        message.positiveIntValue = object.positiveIntValue ?? 0;
+        message.negativeIntValue = object.negativeIntValue ?? 0;
+        message.doubleValue = object.doubleValue ?? 0;
+        message.stringValue = object.stringValue ?? new Uint8Array(0);
+        message.aggregateValue = object.aggregateValue ?? "";
         return message;
     },
 };
@@ -2176,13 +2154,12 @@ export const UninterpretedOption_NamePart = {
         return message;
     },
     create(base) {
-        return UninterpretedOption_NamePart.fromPartial(base !== null && base !== void 0 ? base : {});
+        return UninterpretedOption_NamePart.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseUninterpretedOption_NamePart();
-        message.namePart = (_a = object.namePart) !== null && _a !== void 0 ? _a : "";
-        message.isExtension = (_b = object.isExtension) !== null && _b !== void 0 ? _b : false;
+        message.namePart = object.namePart ?? "";
+        message.isExtension = object.isExtension ?? false;
         return message;
     },
 };
@@ -2219,12 +2196,11 @@ export const SourceCodeInfo = {
         return message;
     },
     create(base) {
-        return SourceCodeInfo.fromPartial(base !== null && base !== void 0 ? base : {});
+        return SourceCodeInfo.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseSourceCodeInfo();
-        message.location = ((_a = object.location) === null || _a === void 0 ? void 0 : _a.map((e) => SourceCodeInfo_Location.fromPartial(e))) || [];
+        message.location = object.location?.map((e) => SourceCodeInfo_Location.fromPartial(e)) || [];
         return message;
     },
 };
@@ -2319,16 +2295,15 @@ export const SourceCodeInfo_Location = {
         return message;
     },
     create(base) {
-        return SourceCodeInfo_Location.fromPartial(base !== null && base !== void 0 ? base : {});
+        return SourceCodeInfo_Location.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e;
         const message = createBaseSourceCodeInfo_Location();
-        message.path = ((_a = object.path) === null || _a === void 0 ? void 0 : _a.map((e) => e)) || [];
-        message.span = ((_b = object.span) === null || _b === void 0 ? void 0 : _b.map((e) => e)) || [];
-        message.leadingComments = (_c = object.leadingComments) !== null && _c !== void 0 ? _c : "";
-        message.trailingComments = (_d = object.trailingComments) !== null && _d !== void 0 ? _d : "";
-        message.leadingDetachedComments = ((_e = object.leadingDetachedComments) === null || _e === void 0 ? void 0 : _e.map((e) => e)) || [];
+        message.path = object.path?.map((e) => e) || [];
+        message.span = object.span?.map((e) => e) || [];
+        message.leadingComments = object.leadingComments ?? "";
+        message.trailingComments = object.trailingComments ?? "";
+        message.leadingDetachedComments = object.leadingDetachedComments?.map((e) => e) || [];
         return message;
     },
 };
@@ -2365,12 +2340,11 @@ export const GeneratedCodeInfo = {
         return message;
     },
     create(base) {
-        return GeneratedCodeInfo.fromPartial(base !== null && base !== void 0 ? base : {});
+        return GeneratedCodeInfo.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseGeneratedCodeInfo();
-        message.annotation = ((_a = object.annotation) === null || _a === void 0 ? void 0 : _a.map((e) => GeneratedCodeInfo_Annotation.fromPartial(e))) || [];
+        message.annotation = object.annotation?.map((e) => GeneratedCodeInfo_Annotation.fromPartial(e)) || [];
         return message;
     },
 };
@@ -2446,15 +2420,14 @@ export const GeneratedCodeInfo_Annotation = {
         return message;
     },
     create(base) {
-        return GeneratedCodeInfo_Annotation.fromPartial(base !== null && base !== void 0 ? base : {});
+        return GeneratedCodeInfo_Annotation.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d;
         const message = createBaseGeneratedCodeInfo_Annotation();
-        message.path = ((_a = object.path) === null || _a === void 0 ? void 0 : _a.map((e) => e)) || [];
-        message.sourceFile = (_b = object.sourceFile) !== null && _b !== void 0 ? _b : "";
-        message.begin = (_c = object.begin) !== null && _c !== void 0 ? _c : 0;
-        message.end = (_d = object.end) !== null && _d !== void 0 ? _d : 0;
+        message.path = object.path?.map((e) => e) || [];
+        message.sourceFile = object.sourceFile ?? "";
+        message.begin = object.begin ?? 0;
+        message.end = object.end ?? 0;
         return message;
     },
 };

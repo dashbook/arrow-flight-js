@@ -1038,12 +1038,11 @@ export const CommandGetSqlInfo = {
         return message;
     },
     create(base) {
-        return CommandGetSqlInfo.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandGetSqlInfo.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseCommandGetSqlInfo();
-        message.info = ((_a = object.info) === null || _a === void 0 ? void 0 : _a.map((e) => e)) || [];
+        message.info = object.info?.map((e) => e) || [];
         return message;
     },
 };
@@ -1080,12 +1079,11 @@ export const CommandGetXdbcTypeInfo = {
         return message;
     },
     create(base) {
-        return CommandGetXdbcTypeInfo.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandGetXdbcTypeInfo.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseCommandGetXdbcTypeInfo();
-        message.dataType = (_a = object.dataType) !== null && _a !== void 0 ? _a : undefined;
+        message.dataType = object.dataType ?? undefined;
         return message;
     },
 };
@@ -1112,7 +1110,7 @@ export const CommandGetCatalogs = {
         return message;
     },
     create(base) {
-        return CommandGetCatalogs.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandGetCatalogs.fromPartial(base ?? {});
     },
     fromPartial(_) {
         const message = createBaseCommandGetCatalogs();
@@ -1162,13 +1160,12 @@ export const CommandGetDbSchemas = {
         return message;
     },
     create(base) {
-        return CommandGetDbSchemas.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandGetDbSchemas.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseCommandGetDbSchemas();
-        message.catalog = (_a = object.catalog) !== null && _a !== void 0 ? _a : undefined;
-        message.dbSchemaFilterPattern = (_b = object.dbSchemaFilterPattern) !== null && _b !== void 0 ? _b : undefined;
+        message.catalog = object.catalog ?? undefined;
+        message.dbSchemaFilterPattern = object.dbSchemaFilterPattern ?? undefined;
         return message;
     },
 };
@@ -1251,16 +1248,15 @@ export const CommandGetTables = {
         return message;
     },
     create(base) {
-        return CommandGetTables.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandGetTables.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e;
         const message = createBaseCommandGetTables();
-        message.catalog = (_a = object.catalog) !== null && _a !== void 0 ? _a : undefined;
-        message.dbSchemaFilterPattern = (_b = object.dbSchemaFilterPattern) !== null && _b !== void 0 ? _b : undefined;
-        message.tableNameFilterPattern = (_c = object.tableNameFilterPattern) !== null && _c !== void 0 ? _c : undefined;
-        message.tableTypes = ((_d = object.tableTypes) === null || _d === void 0 ? void 0 : _d.map((e) => e)) || [];
-        message.includeSchema = (_e = object.includeSchema) !== null && _e !== void 0 ? _e : false;
+        message.catalog = object.catalog ?? undefined;
+        message.dbSchemaFilterPattern = object.dbSchemaFilterPattern ?? undefined;
+        message.tableNameFilterPattern = object.tableNameFilterPattern ?? undefined;
+        message.tableTypes = object.tableTypes?.map((e) => e) || [];
+        message.includeSchema = object.includeSchema ?? false;
         return message;
     },
 };
@@ -1287,7 +1283,7 @@ export const CommandGetTableTypes = {
         return message;
     },
     create(base) {
-        return CommandGetTableTypes.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandGetTableTypes.fromPartial(base ?? {});
     },
     fromPartial(_) {
         const message = createBaseCommandGetTableTypes();
@@ -1347,14 +1343,13 @@ export const CommandGetPrimaryKeys = {
         return message;
     },
     create(base) {
-        return CommandGetPrimaryKeys.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandGetPrimaryKeys.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c;
         const message = createBaseCommandGetPrimaryKeys();
-        message.catalog = (_a = object.catalog) !== null && _a !== void 0 ? _a : undefined;
-        message.dbSchema = (_b = object.dbSchema) !== null && _b !== void 0 ? _b : undefined;
-        message.table = (_c = object.table) !== null && _c !== void 0 ? _c : "";
+        message.catalog = object.catalog ?? undefined;
+        message.dbSchema = object.dbSchema ?? undefined;
+        message.table = object.table ?? "";
         return message;
     },
 };
@@ -1411,14 +1406,13 @@ export const CommandGetExportedKeys = {
         return message;
     },
     create(base) {
-        return CommandGetExportedKeys.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandGetExportedKeys.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c;
         const message = createBaseCommandGetExportedKeys();
-        message.catalog = (_a = object.catalog) !== null && _a !== void 0 ? _a : undefined;
-        message.dbSchema = (_b = object.dbSchema) !== null && _b !== void 0 ? _b : undefined;
-        message.table = (_c = object.table) !== null && _c !== void 0 ? _c : "";
+        message.catalog = object.catalog ?? undefined;
+        message.dbSchema = object.dbSchema ?? undefined;
+        message.table = object.table ?? "";
         return message;
     },
 };
@@ -1475,14 +1469,13 @@ export const CommandGetImportedKeys = {
         return message;
     },
     create(base) {
-        return CommandGetImportedKeys.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandGetImportedKeys.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c;
         const message = createBaseCommandGetImportedKeys();
-        message.catalog = (_a = object.catalog) !== null && _a !== void 0 ? _a : undefined;
-        message.dbSchema = (_b = object.dbSchema) !== null && _b !== void 0 ? _b : undefined;
-        message.table = (_c = object.table) !== null && _c !== void 0 ? _c : "";
+        message.catalog = object.catalog ?? undefined;
+        message.dbSchema = object.dbSchema ?? undefined;
+        message.table = object.table ?? "";
         return message;
     },
 };
@@ -1576,17 +1569,16 @@ export const CommandGetCrossReference = {
         return message;
     },
     create(base) {
-        return CommandGetCrossReference.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandGetCrossReference.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e, _f;
         const message = createBaseCommandGetCrossReference();
-        message.pkCatalog = (_a = object.pkCatalog) !== null && _a !== void 0 ? _a : undefined;
-        message.pkDbSchema = (_b = object.pkDbSchema) !== null && _b !== void 0 ? _b : undefined;
-        message.pkTable = (_c = object.pkTable) !== null && _c !== void 0 ? _c : "";
-        message.fkCatalog = (_d = object.fkCatalog) !== null && _d !== void 0 ? _d : undefined;
-        message.fkDbSchema = (_e = object.fkDbSchema) !== null && _e !== void 0 ? _e : undefined;
-        message.fkTable = (_f = object.fkTable) !== null && _f !== void 0 ? _f : "";
+        message.pkCatalog = object.pkCatalog ?? undefined;
+        message.pkDbSchema = object.pkDbSchema ?? undefined;
+        message.pkTable = object.pkTable ?? "";
+        message.fkCatalog = object.fkCatalog ?? undefined;
+        message.fkDbSchema = object.fkDbSchema ?? undefined;
+        message.fkTable = object.fkTable ?? "";
         return message;
     },
 };
@@ -1633,13 +1625,12 @@ export const ActionCreatePreparedStatementRequest = {
         return message;
     },
     create(base) {
-        return ActionCreatePreparedStatementRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionCreatePreparedStatementRequest.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseActionCreatePreparedStatementRequest();
-        message.query = (_a = object.query) !== null && _a !== void 0 ? _a : "";
-        message.transactionId = (_b = object.transactionId) !== null && _b !== void 0 ? _b : undefined;
+        message.query = object.query ?? "";
+        message.transactionId = object.transactionId ?? undefined;
         return message;
     },
 };
@@ -1686,13 +1677,12 @@ export const SubstraitPlan = {
         return message;
     },
     create(base) {
-        return SubstraitPlan.fromPartial(base !== null && base !== void 0 ? base : {});
+        return SubstraitPlan.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseSubstraitPlan();
-        message.plan = (_a = object.plan) !== null && _a !== void 0 ? _a : new Uint8Array(0);
-        message.version = (_b = object.version) !== null && _b !== void 0 ? _b : "";
+        message.plan = object.plan ?? new Uint8Array(0);
+        message.version = object.version ?? "";
         return message;
     },
 };
@@ -1739,15 +1729,14 @@ export const ActionCreatePreparedSubstraitPlanRequest = {
         return message;
     },
     create(base) {
-        return ActionCreatePreparedSubstraitPlanRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionCreatePreparedSubstraitPlanRequest.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseActionCreatePreparedSubstraitPlanRequest();
         message.plan = (object.plan !== undefined && object.plan !== null)
             ? SubstraitPlan.fromPartial(object.plan)
             : undefined;
-        message.transactionId = (_a = object.transactionId) !== null && _a !== void 0 ? _a : undefined;
+        message.transactionId = object.transactionId ?? undefined;
         return message;
     },
 };
@@ -1808,14 +1797,13 @@ export const ActionCreatePreparedStatementResult = {
         return message;
     },
     create(base) {
-        return ActionCreatePreparedStatementResult.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionCreatePreparedStatementResult.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c;
         const message = createBaseActionCreatePreparedStatementResult();
-        message.preparedStatementHandle = (_a = object.preparedStatementHandle) !== null && _a !== void 0 ? _a : new Uint8Array(0);
-        message.datasetSchema = (_b = object.datasetSchema) !== null && _b !== void 0 ? _b : new Uint8Array(0);
-        message.parameterSchema = (_c = object.parameterSchema) !== null && _c !== void 0 ? _c : new Uint8Array(0);
+        message.preparedStatementHandle = object.preparedStatementHandle ?? new Uint8Array(0);
+        message.datasetSchema = object.datasetSchema ?? new Uint8Array(0);
+        message.parameterSchema = object.parameterSchema ?? new Uint8Array(0);
         return message;
     },
 };
@@ -1852,12 +1840,11 @@ export const ActionClosePreparedStatementRequest = {
         return message;
     },
     create(base) {
-        return ActionClosePreparedStatementRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionClosePreparedStatementRequest.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseActionClosePreparedStatementRequest();
-        message.preparedStatementHandle = (_a = object.preparedStatementHandle) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.preparedStatementHandle = object.preparedStatementHandle ?? new Uint8Array(0);
         return message;
     },
 };
@@ -1884,7 +1871,7 @@ export const ActionBeginTransactionRequest = {
         return message;
     },
     create(base) {
-        return ActionBeginTransactionRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionBeginTransactionRequest.fromPartial(base ?? {});
     },
     fromPartial(_) {
         const message = createBaseActionBeginTransactionRequest();
@@ -1934,13 +1921,12 @@ export const ActionBeginSavepointRequest = {
         return message;
     },
     create(base) {
-        return ActionBeginSavepointRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionBeginSavepointRequest.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseActionBeginSavepointRequest();
-        message.transactionId = (_a = object.transactionId) !== null && _a !== void 0 ? _a : new Uint8Array(0);
-        message.name = (_b = object.name) !== null && _b !== void 0 ? _b : "";
+        message.transactionId = object.transactionId ?? new Uint8Array(0);
+        message.name = object.name ?? "";
         return message;
     },
 };
@@ -1977,12 +1963,11 @@ export const ActionBeginTransactionResult = {
         return message;
     },
     create(base) {
-        return ActionBeginTransactionResult.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionBeginTransactionResult.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseActionBeginTransactionResult();
-        message.transactionId = (_a = object.transactionId) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.transactionId = object.transactionId ?? new Uint8Array(0);
         return message;
     },
 };
@@ -2019,12 +2004,11 @@ export const ActionBeginSavepointResult = {
         return message;
     },
     create(base) {
-        return ActionBeginSavepointResult.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionBeginSavepointResult.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseActionBeginSavepointResult();
-        message.savepointId = (_a = object.savepointId) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.savepointId = object.savepointId ?? new Uint8Array(0);
         return message;
     },
 };
@@ -2071,13 +2055,12 @@ export const ActionEndTransactionRequest = {
         return message;
     },
     create(base) {
-        return ActionEndTransactionRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionEndTransactionRequest.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseActionEndTransactionRequest();
-        message.transactionId = (_a = object.transactionId) !== null && _a !== void 0 ? _a : new Uint8Array(0);
-        message.action = (_b = object.action) !== null && _b !== void 0 ? _b : 0;
+        message.transactionId = object.transactionId ?? new Uint8Array(0);
+        message.action = object.action ?? 0;
         return message;
     },
 };
@@ -2124,13 +2107,12 @@ export const ActionEndSavepointRequest = {
         return message;
     },
     create(base) {
-        return ActionEndSavepointRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionEndSavepointRequest.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseActionEndSavepointRequest();
-        message.savepointId = (_a = object.savepointId) !== null && _a !== void 0 ? _a : new Uint8Array(0);
-        message.action = (_b = object.action) !== null && _b !== void 0 ? _b : 0;
+        message.savepointId = object.savepointId ?? new Uint8Array(0);
+        message.action = object.action ?? 0;
         return message;
     },
 };
@@ -2177,13 +2159,12 @@ export const CommandStatementQuery = {
         return message;
     },
     create(base) {
-        return CommandStatementQuery.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandStatementQuery.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseCommandStatementQuery();
-        message.query = (_a = object.query) !== null && _a !== void 0 ? _a : "";
-        message.transactionId = (_b = object.transactionId) !== null && _b !== void 0 ? _b : undefined;
+        message.query = object.query ?? "";
+        message.transactionId = object.transactionId ?? undefined;
         return message;
     },
 };
@@ -2230,15 +2211,14 @@ export const CommandStatementSubstraitPlan = {
         return message;
     },
     create(base) {
-        return CommandStatementSubstraitPlan.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandStatementSubstraitPlan.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseCommandStatementSubstraitPlan();
         message.plan = (object.plan !== undefined && object.plan !== null)
             ? SubstraitPlan.fromPartial(object.plan)
             : undefined;
-        message.transactionId = (_a = object.transactionId) !== null && _a !== void 0 ? _a : undefined;
+        message.transactionId = object.transactionId ?? undefined;
         return message;
     },
 };
@@ -2275,12 +2255,11 @@ export const TicketStatementQuery = {
         return message;
     },
     create(base) {
-        return TicketStatementQuery.fromPartial(base !== null && base !== void 0 ? base : {});
+        return TicketStatementQuery.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseTicketStatementQuery();
-        message.statementHandle = (_a = object.statementHandle) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.statementHandle = object.statementHandle ?? new Uint8Array(0);
         return message;
     },
 };
@@ -2317,12 +2296,11 @@ export const CommandPreparedStatementQuery = {
         return message;
     },
     create(base) {
-        return CommandPreparedStatementQuery.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandPreparedStatementQuery.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseCommandPreparedStatementQuery();
-        message.preparedStatementHandle = (_a = object.preparedStatementHandle) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.preparedStatementHandle = object.preparedStatementHandle ?? new Uint8Array(0);
         return message;
     },
 };
@@ -2369,13 +2347,12 @@ export const CommandStatementUpdate = {
         return message;
     },
     create(base) {
-        return CommandStatementUpdate.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandStatementUpdate.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseCommandStatementUpdate();
-        message.query = (_a = object.query) !== null && _a !== void 0 ? _a : "";
-        message.transactionId = (_b = object.transactionId) !== null && _b !== void 0 ? _b : undefined;
+        message.query = object.query ?? "";
+        message.transactionId = object.transactionId ?? undefined;
         return message;
     },
 };
@@ -2412,12 +2389,11 @@ export const CommandPreparedStatementUpdate = {
         return message;
     },
     create(base) {
-        return CommandPreparedStatementUpdate.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandPreparedStatementUpdate.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseCommandPreparedStatementUpdate();
-        message.preparedStatementHandle = (_a = object.preparedStatementHandle) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.preparedStatementHandle = object.preparedStatementHandle ?? new Uint8Array(0);
         return message;
     },
 };
@@ -2526,21 +2502,20 @@ export const CommandStatementIngest = {
         return message;
     },
     create(base) {
-        return CommandStatementIngest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandStatementIngest.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e, _f;
         const message = createBaseCommandStatementIngest();
         message.tableDefinitionOptions =
             (object.tableDefinitionOptions !== undefined && object.tableDefinitionOptions !== null)
                 ? CommandStatementIngest_TableDefinitionOptions.fromPartial(object.tableDefinitionOptions)
                 : undefined;
-        message.table = (_a = object.table) !== null && _a !== void 0 ? _a : "";
-        message.schema = (_b = object.schema) !== null && _b !== void 0 ? _b : undefined;
-        message.catalog = (_c = object.catalog) !== null && _c !== void 0 ? _c : undefined;
-        message.temporary = (_d = object.temporary) !== null && _d !== void 0 ? _d : false;
-        message.transactionId = (_e = object.transactionId) !== null && _e !== void 0 ? _e : undefined;
-        message.options = Object.entries((_f = object.options) !== null && _f !== void 0 ? _f : {}).reduce((acc, [key, value]) => {
+        message.table = object.table ?? "";
+        message.schema = object.schema ?? undefined;
+        message.catalog = object.catalog ?? undefined;
+        message.temporary = object.temporary ?? false;
+        message.transactionId = object.transactionId ?? undefined;
+        message.options = Object.entries(object.options ?? {}).reduce((acc, [key, value]) => {
             if (value !== undefined) {
                 acc[key] = globalThis.String(value);
             }
@@ -2592,13 +2567,12 @@ export const CommandStatementIngest_TableDefinitionOptions = {
         return message;
     },
     create(base) {
-        return CommandStatementIngest_TableDefinitionOptions.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandStatementIngest_TableDefinitionOptions.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseCommandStatementIngest_TableDefinitionOptions();
-        message.ifNotExist = (_a = object.ifNotExist) !== null && _a !== void 0 ? _a : 0;
-        message.ifExists = (_b = object.ifExists) !== null && _b !== void 0 ? _b : 0;
+        message.ifNotExist = object.ifNotExist ?? 0;
+        message.ifExists = object.ifExists ?? 0;
         return message;
     },
 };
@@ -2645,13 +2619,12 @@ export const CommandStatementIngest_OptionsEntry = {
         return message;
     },
     create(base) {
-        return CommandStatementIngest_OptionsEntry.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CommandStatementIngest_OptionsEntry.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseCommandStatementIngest_OptionsEntry();
-        message.key = (_a = object.key) !== null && _a !== void 0 ? _a : "";
-        message.value = (_b = object.value) !== null && _b !== void 0 ? _b : "";
+        message.key = object.key ?? "";
+        message.value = object.value ?? "";
         return message;
     },
 };
@@ -2688,12 +2661,11 @@ export const DoPutUpdateResult = {
         return message;
     },
     create(base) {
-        return DoPutUpdateResult.fromPartial(base !== null && base !== void 0 ? base : {});
+        return DoPutUpdateResult.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseDoPutUpdateResult();
-        message.recordCount = (_a = object.recordCount) !== null && _a !== void 0 ? _a : 0;
+        message.recordCount = object.recordCount ?? 0;
         return message;
     },
 };
@@ -2730,12 +2702,11 @@ export const DoPutPreparedStatementResult = {
         return message;
     },
     create(base) {
-        return DoPutPreparedStatementResult.fromPartial(base !== null && base !== void 0 ? base : {});
+        return DoPutPreparedStatementResult.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseDoPutPreparedStatementResult();
-        message.preparedStatementHandle = (_a = object.preparedStatementHandle) !== null && _a !== void 0 ? _a : undefined;
+        message.preparedStatementHandle = object.preparedStatementHandle ?? undefined;
         return message;
     },
 };
@@ -2772,12 +2743,11 @@ export const ActionCancelQueryRequest = {
         return message;
     },
     create(base) {
-        return ActionCancelQueryRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionCancelQueryRequest.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseActionCancelQueryRequest();
-        message.info = (_a = object.info) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.info = object.info ?? new Uint8Array(0);
         return message;
     },
 };
@@ -2814,12 +2784,11 @@ export const ActionCancelQueryResult = {
         return message;
     },
     create(base) {
-        return ActionCancelQueryResult.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionCancelQueryResult.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseActionCancelQueryResult();
-        message.result = (_a = object.result) !== null && _a !== void 0 ? _a : 0;
+        message.result = object.result ?? 0;
         return message;
     },
 };

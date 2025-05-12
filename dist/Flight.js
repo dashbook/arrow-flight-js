@@ -135,13 +135,12 @@ export const HandshakeRequest = {
         return message;
     },
     create(base) {
-        return HandshakeRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return HandshakeRequest.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseHandshakeRequest();
-        message.protocolVersion = (_a = object.protocolVersion) !== null && _a !== void 0 ? _a : 0;
-        message.payload = (_b = object.payload) !== null && _b !== void 0 ? _b : new Uint8Array(0);
+        message.protocolVersion = object.protocolVersion ?? 0;
+        message.payload = object.payload ?? new Uint8Array(0);
         return message;
     },
 };
@@ -188,13 +187,12 @@ export const HandshakeResponse = {
         return message;
     },
     create(base) {
-        return HandshakeResponse.fromPartial(base !== null && base !== void 0 ? base : {});
+        return HandshakeResponse.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseHandshakeResponse();
-        message.protocolVersion = (_a = object.protocolVersion) !== null && _a !== void 0 ? _a : 0;
-        message.payload = (_b = object.payload) !== null && _b !== void 0 ? _b : new Uint8Array(0);
+        message.protocolVersion = object.protocolVersion ?? 0;
+        message.payload = object.payload ?? new Uint8Array(0);
         return message;
     },
 };
@@ -241,13 +239,12 @@ export const BasicAuth = {
         return message;
     },
     create(base) {
-        return BasicAuth.fromPartial(base !== null && base !== void 0 ? base : {});
+        return BasicAuth.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseBasicAuth();
-        message.username = (_a = object.username) !== null && _a !== void 0 ? _a : "";
-        message.password = (_b = object.password) !== null && _b !== void 0 ? _b : "";
+        message.username = object.username ?? "";
+        message.password = object.password ?? "";
         return message;
     },
 };
@@ -274,7 +271,7 @@ export const Empty = {
         return message;
     },
     create(base) {
-        return Empty.fromPartial(base !== null && base !== void 0 ? base : {});
+        return Empty.fromPartial(base ?? {});
     },
     fromPartial(_) {
         const message = createBaseEmpty();
@@ -324,13 +321,12 @@ export const ActionType = {
         return message;
     },
     create(base) {
-        return ActionType.fromPartial(base !== null && base !== void 0 ? base : {});
+        return ActionType.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseActionType();
-        message.type = (_a = object.type) !== null && _a !== void 0 ? _a : "";
-        message.description = (_b = object.description) !== null && _b !== void 0 ? _b : "";
+        message.type = object.type ?? "";
+        message.description = object.description ?? "";
         return message;
     },
 };
@@ -367,12 +363,11 @@ export const Criteria = {
         return message;
     },
     create(base) {
-        return Criteria.fromPartial(base !== null && base !== void 0 ? base : {});
+        return Criteria.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseCriteria();
-        message.expression = (_a = object.expression) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.expression = object.expression ?? new Uint8Array(0);
         return message;
     },
 };
@@ -419,13 +414,12 @@ export const Action = {
         return message;
     },
     create(base) {
-        return Action.fromPartial(base !== null && base !== void 0 ? base : {});
+        return Action.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseAction();
-        message.type = (_a = object.type) !== null && _a !== void 0 ? _a : "";
-        message.body = (_b = object.body) !== null && _b !== void 0 ? _b : new Uint8Array(0);
+        message.type = object.type ?? "";
+        message.body = object.body ?? new Uint8Array(0);
         return message;
     },
 };
@@ -462,12 +456,11 @@ export const Result = {
         return message;
     },
     create(base) {
-        return Result.fromPartial(base !== null && base !== void 0 ? base : {});
+        return Result.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseResult();
-        message.body = (_a = object.body) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.body = object.body ?? new Uint8Array(0);
         return message;
     },
 };
@@ -504,12 +497,11 @@ export const SchemaResult = {
         return message;
     },
     create(base) {
-        return SchemaResult.fromPartial(base !== null && base !== void 0 ? base : {});
+        return SchemaResult.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseSchemaResult();
-        message.schema = (_a = object.schema) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.schema = object.schema ?? new Uint8Array(0);
         return message;
     },
 };
@@ -566,14 +558,13 @@ export const FlightDescriptor = {
         return message;
     },
     create(base) {
-        return FlightDescriptor.fromPartial(base !== null && base !== void 0 ? base : {});
+        return FlightDescriptor.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c;
         const message = createBaseFlightDescriptor();
-        message.type = (_a = object.type) !== null && _a !== void 0 ? _a : 0;
-        message.cmd = (_b = object.cmd) !== null && _b !== void 0 ? _b : new Uint8Array(0);
-        message.path = ((_c = object.path) === null || _c === void 0 ? void 0 : _c.map((e) => e)) || [];
+        message.type = object.type ?? 0;
+        message.cmd = object.cmd ?? new Uint8Array(0);
+        message.path = object.path?.map((e) => e) || [];
         return message;
     },
 };
@@ -678,20 +669,19 @@ export const FlightInfo = {
         return message;
     },
     create(base) {
-        return FlightInfo.fromPartial(base !== null && base !== void 0 ? base : {});
+        return FlightInfo.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d, _e, _f;
         const message = createBaseFlightInfo();
-        message.schema = (_a = object.schema) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.schema = object.schema ?? new Uint8Array(0);
         message.flightDescriptor = (object.flightDescriptor !== undefined && object.flightDescriptor !== null)
             ? FlightDescriptor.fromPartial(object.flightDescriptor)
             : undefined;
-        message.endpoint = ((_b = object.endpoint) === null || _b === void 0 ? void 0 : _b.map((e) => FlightEndpoint.fromPartial(e))) || [];
-        message.totalRecords = (_c = object.totalRecords) !== null && _c !== void 0 ? _c : 0;
-        message.totalBytes = (_d = object.totalBytes) !== null && _d !== void 0 ? _d : 0;
-        message.ordered = (_e = object.ordered) !== null && _e !== void 0 ? _e : false;
-        message.appMetadata = (_f = object.appMetadata) !== null && _f !== void 0 ? _f : new Uint8Array(0);
+        message.endpoint = object.endpoint?.map((e) => FlightEndpoint.fromPartial(e)) || [];
+        message.totalRecords = object.totalRecords ?? 0;
+        message.totalBytes = object.totalBytes ?? 0;
+        message.ordered = object.ordered ?? false;
+        message.appMetadata = object.appMetadata ?? new Uint8Array(0);
         return message;
     },
 };
@@ -758,10 +748,9 @@ export const PollInfo = {
         return message;
     },
     create(base) {
-        return PollInfo.fromPartial(base !== null && base !== void 0 ? base : {});
+        return PollInfo.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBasePollInfo();
         message.info = (object.info !== undefined && object.info !== null)
             ? FlightInfo.fromPartial(object.info)
@@ -769,8 +758,8 @@ export const PollInfo = {
         message.flightDescriptor = (object.flightDescriptor !== undefined && object.flightDescriptor !== null)
             ? FlightDescriptor.fromPartial(object.flightDescriptor)
             : undefined;
-        message.progress = (_a = object.progress) !== null && _a !== void 0 ? _a : undefined;
-        message.expirationTime = (_b = object.expirationTime) !== null && _b !== void 0 ? _b : undefined;
+        message.progress = object.progress ?? undefined;
+        message.expirationTime = object.expirationTime ?? undefined;
         return message;
     },
 };
@@ -807,7 +796,7 @@ export const CancelFlightInfoRequest = {
         return message;
     },
     create(base) {
-        return CancelFlightInfoRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CancelFlightInfoRequest.fromPartial(base ?? {});
     },
     fromPartial(object) {
         const message = createBaseCancelFlightInfoRequest();
@@ -850,12 +839,11 @@ export const CancelFlightInfoResult = {
         return message;
     },
     create(base) {
-        return CancelFlightInfoResult.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CancelFlightInfoResult.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseCancelFlightInfoResult();
-        message.status = (_a = object.status) !== null && _a !== void 0 ? _a : 0;
+        message.status = object.status ?? 0;
         return message;
     },
 };
@@ -892,12 +880,11 @@ export const Ticket = {
         return message;
     },
     create(base) {
-        return Ticket.fromPartial(base !== null && base !== void 0 ? base : {});
+        return Ticket.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseTicket();
-        message.ticket = (_a = object.ticket) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.ticket = object.ticket ?? new Uint8Array(0);
         return message;
     },
 };
@@ -934,12 +921,11 @@ export const Location = {
         return message;
     },
     create(base) {
-        return Location.fromPartial(base !== null && base !== void 0 ? base : {});
+        return Location.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseLocation();
-        message.uri = (_a = object.uri) !== null && _a !== void 0 ? _a : "";
+        message.uri = object.uri ?? "";
         return message;
     },
 };
@@ -1006,17 +992,16 @@ export const FlightEndpoint = {
         return message;
     },
     create(base) {
-        return FlightEndpoint.fromPartial(base !== null && base !== void 0 ? base : {});
+        return FlightEndpoint.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c;
         const message = createBaseFlightEndpoint();
         message.ticket = (object.ticket !== undefined && object.ticket !== null)
             ? Ticket.fromPartial(object.ticket)
             : undefined;
-        message.location = ((_a = object.location) === null || _a === void 0 ? void 0 : _a.map((e) => Location.fromPartial(e))) || [];
-        message.expirationTime = (_b = object.expirationTime) !== null && _b !== void 0 ? _b : undefined;
-        message.appMetadata = (_c = object.appMetadata) !== null && _c !== void 0 ? _c : new Uint8Array(0);
+        message.location = object.location?.map((e) => Location.fromPartial(e)) || [];
+        message.expirationTime = object.expirationTime ?? undefined;
+        message.appMetadata = object.appMetadata ?? new Uint8Array(0);
         return message;
     },
 };
@@ -1053,7 +1038,7 @@ export const RenewFlightEndpointRequest = {
         return message;
     },
     create(base) {
-        return RenewFlightEndpointRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return RenewFlightEndpointRequest.fromPartial(base ?? {});
     },
     fromPartial(object) {
         const message = createBaseRenewFlightEndpointRequest();
@@ -1131,17 +1116,16 @@ export const FlightData = {
         return message;
     },
     create(base) {
-        return FlightData.fromPartial(base !== null && base !== void 0 ? base : {});
+        return FlightData.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c;
         const message = createBaseFlightData();
         message.flightDescriptor = (object.flightDescriptor !== undefined && object.flightDescriptor !== null)
             ? FlightDescriptor.fromPartial(object.flightDescriptor)
             : undefined;
-        message.dataHeader = (_a = object.dataHeader) !== null && _a !== void 0 ? _a : new Uint8Array(0);
-        message.appMetadata = (_b = object.appMetadata) !== null && _b !== void 0 ? _b : new Uint8Array(0);
-        message.dataBody = (_c = object.dataBody) !== null && _c !== void 0 ? _c : new Uint8Array(0);
+        message.dataHeader = object.dataHeader ?? new Uint8Array(0);
+        message.appMetadata = object.appMetadata ?? new Uint8Array(0);
+        message.dataBody = object.dataBody ?? new Uint8Array(0);
         return message;
     },
 };
@@ -1178,12 +1162,11 @@ export const PutResult = {
         return message;
     },
     create(base) {
-        return PutResult.fromPartial(base !== null && base !== void 0 ? base : {});
+        return PutResult.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBasePutResult();
-        message.appMetadata = (_a = object.appMetadata) !== null && _a !== void 0 ? _a : new Uint8Array(0);
+        message.appMetadata = object.appMetadata ?? new Uint8Array(0);
         return message;
     },
 };
@@ -1266,15 +1249,14 @@ export const SessionOptionValue = {
         return message;
     },
     create(base) {
-        return SessionOptionValue.fromPartial(base !== null && base !== void 0 ? base : {});
+        return SessionOptionValue.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b, _c, _d;
         const message = createBaseSessionOptionValue();
-        message.stringValue = (_a = object.stringValue) !== null && _a !== void 0 ? _a : undefined;
-        message.boolValue = (_b = object.boolValue) !== null && _b !== void 0 ? _b : undefined;
-        message.int64Value = (_c = object.int64Value) !== null && _c !== void 0 ? _c : undefined;
-        message.doubleValue = (_d = object.doubleValue) !== null && _d !== void 0 ? _d : undefined;
+        message.stringValue = object.stringValue ?? undefined;
+        message.boolValue = object.boolValue ?? undefined;
+        message.int64Value = object.int64Value ?? undefined;
+        message.doubleValue = object.doubleValue ?? undefined;
         message.stringListValue = (object.stringListValue !== undefined && object.stringListValue !== null)
             ? SessionOptionValue_StringListValue.fromPartial(object.stringListValue)
             : undefined;
@@ -1314,12 +1296,11 @@ export const SessionOptionValue_StringListValue = {
         return message;
     },
     create(base) {
-        return SessionOptionValue_StringListValue.fromPartial(base !== null && base !== void 0 ? base : {});
+        return SessionOptionValue_StringListValue.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseSessionOptionValue_StringListValue();
-        message.values = ((_a = object.values) === null || _a === void 0 ? void 0 : _a.map((e) => e)) || [];
+        message.values = object.values?.map((e) => e) || [];
         return message;
     },
 };
@@ -1359,12 +1340,11 @@ export const SetSessionOptionsRequest = {
         return message;
     },
     create(base) {
-        return SetSessionOptionsRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return SetSessionOptionsRequest.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseSetSessionOptionsRequest();
-        message.sessionOptions = Object.entries((_a = object.sessionOptions) !== null && _a !== void 0 ? _a : {}).reduce((acc, [key, value]) => {
+        message.sessionOptions = Object.entries(object.sessionOptions ?? {}).reduce((acc, [key, value]) => {
             if (value !== undefined) {
                 acc[key] = SessionOptionValue.fromPartial(value);
             }
@@ -1416,12 +1396,11 @@ export const SetSessionOptionsRequest_SessionOptionsEntry = {
         return message;
     },
     create(base) {
-        return SetSessionOptionsRequest_SessionOptionsEntry.fromPartial(base !== null && base !== void 0 ? base : {});
+        return SetSessionOptionsRequest_SessionOptionsEntry.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseSetSessionOptionsRequest_SessionOptionsEntry();
-        message.key = (_a = object.key) !== null && _a !== void 0 ? _a : "";
+        message.key = object.key ?? "";
         message.value = (object.value !== undefined && object.value !== null)
             ? SessionOptionValue.fromPartial(object.value)
             : undefined;
@@ -1464,12 +1443,11 @@ export const SetSessionOptionsResult = {
         return message;
     },
     create(base) {
-        return SetSessionOptionsResult.fromPartial(base !== null && base !== void 0 ? base : {});
+        return SetSessionOptionsResult.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseSetSessionOptionsResult();
-        message.errors = Object.entries((_a = object.errors) !== null && _a !== void 0 ? _a : {}).reduce((acc, [key, value]) => {
+        message.errors = Object.entries(object.errors ?? {}).reduce((acc, [key, value]) => {
             if (value !== undefined) {
                 acc[key] = SetSessionOptionsResult_Error.fromPartial(value);
             }
@@ -1511,12 +1489,11 @@ export const SetSessionOptionsResult_Error = {
         return message;
     },
     create(base) {
-        return SetSessionOptionsResult_Error.fromPartial(base !== null && base !== void 0 ? base : {});
+        return SetSessionOptionsResult_Error.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseSetSessionOptionsResult_Error();
-        message.value = (_a = object.value) !== null && _a !== void 0 ? _a : 0;
+        message.value = object.value ?? 0;
         return message;
     },
 };
@@ -1563,12 +1540,11 @@ export const SetSessionOptionsResult_ErrorsEntry = {
         return message;
     },
     create(base) {
-        return SetSessionOptionsResult_ErrorsEntry.fromPartial(base !== null && base !== void 0 ? base : {});
+        return SetSessionOptionsResult_ErrorsEntry.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseSetSessionOptionsResult_ErrorsEntry();
-        message.key = (_a = object.key) !== null && _a !== void 0 ? _a : "";
+        message.key = object.key ?? "";
         message.value = (object.value !== undefined && object.value !== null)
             ? SetSessionOptionsResult_Error.fromPartial(object.value)
             : undefined;
@@ -1598,7 +1574,7 @@ export const GetSessionOptionsRequest = {
         return message;
     },
     create(base) {
-        return GetSessionOptionsRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return GetSessionOptionsRequest.fromPartial(base ?? {});
     },
     fromPartial(_) {
         const message = createBaseGetSessionOptionsRequest();
@@ -1641,12 +1617,11 @@ export const GetSessionOptionsResult = {
         return message;
     },
     create(base) {
-        return GetSessionOptionsResult.fromPartial(base !== null && base !== void 0 ? base : {});
+        return GetSessionOptionsResult.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseGetSessionOptionsResult();
-        message.sessionOptions = Object.entries((_a = object.sessionOptions) !== null && _a !== void 0 ? _a : {}).reduce((acc, [key, value]) => {
+        message.sessionOptions = Object.entries(object.sessionOptions ?? {}).reduce((acc, [key, value]) => {
             if (value !== undefined) {
                 acc[key] = SessionOptionValue.fromPartial(value);
             }
@@ -1698,12 +1673,11 @@ export const GetSessionOptionsResult_SessionOptionsEntry = {
         return message;
     },
     create(base) {
-        return GetSessionOptionsResult_SessionOptionsEntry.fromPartial(base !== null && base !== void 0 ? base : {});
+        return GetSessionOptionsResult_SessionOptionsEntry.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseGetSessionOptionsResult_SessionOptionsEntry();
-        message.key = (_a = object.key) !== null && _a !== void 0 ? _a : "";
+        message.key = object.key ?? "";
         message.value = (object.value !== undefined && object.value !== null)
             ? SessionOptionValue.fromPartial(object.value)
             : undefined;
@@ -1733,7 +1707,7 @@ export const CloseSessionRequest = {
         return message;
     },
     create(base) {
-        return CloseSessionRequest.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CloseSessionRequest.fromPartial(base ?? {});
     },
     fromPartial(_) {
         const message = createBaseCloseSessionRequest();
@@ -1773,12 +1747,11 @@ export const CloseSessionResult = {
         return message;
     },
     create(base) {
-        return CloseSessionResult.fromPartial(base !== null && base !== void 0 ? base : {});
+        return CloseSessionResult.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a;
         const message = createBaseCloseSessionResult();
-        message.status = (_a = object.status) !== null && _a !== void 0 ? _a : 0;
+        message.status = object.status ?? 0;
         return message;
     },
 };

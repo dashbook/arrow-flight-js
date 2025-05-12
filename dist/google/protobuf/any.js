@@ -49,13 +49,12 @@ export const Any = {
         return message;
     },
     create(base) {
-        return Any.fromPartial(base !== null && base !== void 0 ? base : {});
+        return Any.fromPartial(base ?? {});
     },
     fromPartial(object) {
-        var _a, _b;
         const message = createBaseAny();
-        message.typeUrl = (_a = object.typeUrl) !== null && _a !== void 0 ? _a : "";
-        message.value = (_b = object.value) !== null && _b !== void 0 ? _b : new Uint8Array(0);
+        message.typeUrl = object.typeUrl ?? "";
+        message.value = object.value ?? new Uint8Array(0);
         return message;
     },
 };
